@@ -1,13 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { dataState } from "../interface";
-
-const reverseString = (str) => {
-  return str.split("").reverse().join("");
-};
+import { change } from "../textFunction";
 
 const initialState: dataState = {
-  text: "sad",
-  result: reverseString("sad"),
+  text: "เทพต้น",
+  result: change("เทพต้น"),
 };
 
 const dataSlice = createSlice({
@@ -16,7 +13,7 @@ const dataSlice = createSlice({
   reducers: {
     change_text(state, action: PayloadAction<string>) {
       state.text = action.payload;
-      state.result = reverseString(action.payload);
+      state.result = change(action.payload);
     },
   },
 });
