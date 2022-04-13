@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../Components/Layout";
 import Input from "../Components/Input";
 import { AiFillGithub } from "react-icons/ai";
+import Share from "../Components/Share";
 
 const Home: React.FC = () => {
   return (
@@ -18,8 +19,11 @@ const Home: React.FC = () => {
         </a>
       </div>
       <div className="flex flex-col min-h-[90vh] justify-center items-center font-[Mitr]">
-        <h1 className="text-center text-7xl font-bold mb-6">GameMongGamer</h1>
+        <h1 className="text-center text-4xl md:text-7xl font-bold mb-5">
+          GameMongGamer
+        </h1>
         <Input />
+        <Share />
       </div>
     </Layout>
   );
